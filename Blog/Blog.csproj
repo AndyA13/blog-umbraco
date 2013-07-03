@@ -210,6 +210,9 @@
     <Reference Include="UrlRewritingNet.UrlRewriter">
       <HintPath>..\packages\UmbracoCms.Core.6.1.2.1\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
     </Reference>
+    <Reference Include="Vega.USiteBuilder">
+      <HintPath>..\libs\uSiteBuilder\Vega.USiteBuilder.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -242,13 +245,7 @@
     <Content Include="bin\x86\sqlceme40.dll" />
     <Content Include="bin\x86\sqlceqp40.dll" />
     <Content Include="bin\x86\sqlcese40.dll" />
-    <Content Include="css\dummy.txt" />
     <Content Include="default.aspx" />
-    <Content Include="macroScripts\dummy.txt" />
-    <Content Include="masterpages\dummy.txt" />
-    <Content Include="media\dummy.txt" />
-    <Content Include="scripts\dummy.txt" />
-    <Content Include="usercontrols\dummy.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,11 +253,18 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="xslt\dummy.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="css\" />
+    <Folder Include="macroScripts\" />
+    <Folder Include="masterpages\" />
+    <Folder Include="media\" />
     <Folder Include="Models\" />
+    <Folder Include="scripts\" />
+    <Folder Include="usercontrols\" />
+    <Folder Include="Views\MacroPartials\" />
+    <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
