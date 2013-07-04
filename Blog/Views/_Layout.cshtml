@@ -1,4 +1,217 @@
-﻿@{
+﻿@using System.Globalization
+@{
     Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    
+    @{
+        string title = "Andrew Aitken";
+        
+        if (!string.IsNullOrEmpty(ViewBag.SeoTitle))
+        {
+            title = title + " - " + ViewBag.SeoTitle;
+        }
+    }
+
+    <title>@title</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="span12">
+
+                <header>
+                    <h1>
+                        <a href="/"><span>Andrew</span><span>Aitken</span>.com</a>
+                    </h1>
+                    <p>
+                        [blog]
+                    </p>
+                </header>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span3">
+                <h3>All Posts</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            @this.RenderBody()
+
+
+
+            <div class="span9">
+                <!-- Post -->
+                <div class="row">
+
+                    <div class="span3">
+                        <p class="postMeta uppercase">Tue 18 Jun 2013</p>
+                    </div>
+
+                    <div class="span6">
+
+                        <h2><a href="#">Post Title</a></h2>
+
+                        <p class="postMeta">Posted in <a href="#">Random</a></p>
+
+                        <p>It is true I held the <a href="#">cudgel</a>, but what could I do with it against his four great arms?  Even should I break one of them with my first blow, for I figured that he would attempt to ward off the cudgel, he could reach out and annihilate me with the others before I could recover for a second attack.</p>
+
+                        <p>
+                            <img src="http://andrewaitken.com/media/972/lines2.png" width="390" height="107" alt="vb-lines"></p>
+
+                        <p>In the instant that these thoughts passed through my mind I had turned to make for the window, but my eyes alighting on the form of my erstwhile guardian threw all thoughts of flight to the four winds.  He lay gasping upon the floor of the chamber, his great eyes fastened upon me in what seemed a pitiful appeal for protection.  I could not withstand that look, nor could I, on second thought, have deserted my rescuer without giving as good an account of myself in his behalf as he had in mine.</p>
+
+                        <pre>
+if (this.item == null)
+{
+    return false;
+}
+</pre>
+
+                        <p>Without more ado, therefore, I turned to meet the charge of the infuriated bull ape.  He was now too close upon me for the cudgel to prove of any effective assistance, so I merely threw it as heavily as I could at his advancing bulk.  It struck him just below the knees, eliciting a howl of pain and rage, and so throwing him off his balance that he lunged full upon me with arms wide stretched to ease his fall.</p>
+
+                        <p>Again, as on the preceding day, I had recourse to earthly tactics, and swinging my right fist full upon the point of his chin I followed it with a smashing left to the pit of his stomach.  The effect was marvelous, for, as I lightly sidestepped, after delivering the second blow, he reeled and fell upon the floor doubled up with pain and gasping for wind.  Leaping over his prostrate body, I seized the cudgel and finished the monster before he could regain his feet.</p>
+
+                        <p class="postMeta">
+                            Tags: <a href="#">Html</a>, <a href="#">CSS</a>, <a href="#">javascript</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Post -->
+                <div class="row">
+
+                    <div class="span3">
+                        <p class="postMeta uppercase">Tue 18 Jun 2013</p>
+                    </div>
+
+                    <div class="span6">
+
+                        <h2><a href="#">Post Title</a></h2>
+
+                        <p class="postMeta">Posted in <a href="#">Random</a></p>
+
+                        <p>It is true I held the cudgel, but what could I do with it against his four great arms?  Even should I break one of them with my first blow, for I figured that he would attempt to ward off the cudgel, he could reach out and annihilate me with the others before I could recover for a second attack.</p>
+
+                        <p>In the instant that these thoughts passed through my mind I had turned to make for the window, but my eyes alighting on the form of my erstwhile guardian threw all thoughts of flight to the four winds.  He lay gasping upon the floor of the chamber, his great eyes fastened upon me in what seemed a pitiful appeal for protection.  I could not withstand that look, nor could I, on second thought, have deserted my rescuer without giving as good an account of myself in his behalf as he had in mine.</p>
+
+                        <p>Without more ado, therefore, I turned to meet the charge of the infuriated bull ape.  He was now too close upon me for the cudgel to prove of any effective assistance, so I merely threw it as heavily as I could at his advancing bulk.  It struck him just below the knees, eliciting a howl of pain and rage, and so throwing him off his balance that he lunged full upon me with arms wide stretched to ease his fall.</p>
+
+                        <p>Again, as on the preceding day, I had recourse to earthly tactics, and swinging my right fist full upon the point of his chin I followed it with a smashing left to the pit of his stomach.  The effect was marvelous, for, as I lightly sidestepped, after delivering the second blow, he reeled and fell upon the floor doubled up with pain and gasping for wind.  Leaping over his prostrate body, I seized the cudgel and finished the monster before he could regain his feet.</p>
+
+                        <p class="postMeta">
+                            Tags: <a href="#">Html</a>, <a href="#">CSS</a>, <a href="#">javascript</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Paging -->
+                    <div class="span6 pull-right">
+                        <ul class="pager">
+                            <li class="previous disabled"><a href="#">&laquo; Previous</a></li>
+                            <li class="next"><a href="#">Next &raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span3">
+
+                <p>
+                    <a href="http://feeds.feedburner.com/AndrewAitken" title="RSS Feed">
+                        <img src="img/feed-icon.png" alt="RSS Feed"></a>
+                </p>
+
+                <h3>About</h3>
+
+                <p>
+                    My name is Andrew Aitken and I am a .Net developer working in Glasgow blogging about anything I find interesting or think is worth sharing.
+                </p>
+
+                <h3>Categories</h3>
+
+                <ul class="unstyled">
+                    <li><a href="#">.Net</a></li>
+                    <li><a href="#">Geek</a></li>
+                    <li><a href="#">Goa MCPD Course</a></li>
+                    <li><a href="#">My Blog</a></li>
+                    <li><a href="#">Random</a></li>
+                    <li><a href="#">Umbraco</a></li>
+                </ul>
+
+                <!--<h3>Tags</h3>
+
+                    <ul class="inline">
+                        <li><a href="#">70-513</a></li>
+                        <li><a href="#">70-515</a></li>
+                        <li><a href="#">70-516</a></li>
+                        <li><a href="#">70-519</a></li>
+                        <li><a href="#">C#</a></li>
+                        <li><a href="#">Cache</a></li>
+                        <li><a href="#">Calangute</a></li>
+                        <li><a href="#">Chicken</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Down The Road</a></li>
+                        <li><a href="#">elmah</a></li>
+                        <li><a href="#">Goa</a></li>
+                        <li><a href="#">Hangman</a></li>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">MCPD</a></li>
+                        <li><a href="#">My Blog</a></li>
+                        <li><a href="#">Qwerk</a></li>
+                        <li><a href="#">Umbraco</a></li>
+                        <li><a href="#">Fun</a></li>
+                        <li><a href="#">VB</a></li>
+                    </ul>-->
+
+                <h3>Friends</h3>
+
+                <ul class="unstyled">
+                    <li><a href="http://cameronfletcher.com/" target="_blank">Cameron Fletcher</a></li>
+                    <li><a href="http://dalejharrison.blogspot.com/" target="_blank">Dale Harrison</a></li>
+                    <li><a href="http://dougalmatthews.com/" target="_blank">Dougal Matthews</a></li>
+                    <li><a href="http://www.someonetodriveyouhome.com/blog/" target="_blank">Jason Russell</a></li>
+                    <li><a href="http://glasgowtozocalo.blogspot.com/" target="_blank">Steven Gibson</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="text-right">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <p>
+                        &copy; Copyright Andrew Aitken @DateTime.Now.Year.ToString(CultureInfo.InvariantCulture) | Design by <a href="https://twitter.com/sgxbsxn">Steven Gibson</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -81,6 +81,9 @@ publish
 # Publish Web Output
 *.Publish.xml
 
+# Umbraco files
+umbraco.config
+
 # NuGet Packages Directory
 packages
 
