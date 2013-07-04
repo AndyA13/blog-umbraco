@@ -220,10 +220,13 @@
     <Compile Include="Models\DocumentTypes\BlogYearFolder.cs" />
     <Compile Include="Models\DocumentTypes\Category.cs" />
     <Compile Include="Models\DocumentTypes\CategoryFolder.cs" />
+    <Compile Include="Models\DocumentTypes\FeedBurner.cs" />
     <Compile Include="Models\DocumentTypes\Friend.cs" />
     <Compile Include="Models\DocumentTypes\FriendFolder.cs" />
     <Compile Include="Models\DocumentTypes\Home.cs" />
     <Compile Include="Models\DocumentTypes\Meta.cs" />
+    <Compile Include="Models\DocumentTypes\PageBase.cs" />
+    <Compile Include="Models\DocumentTypes\SiteMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -254,7 +257,41 @@
     <Content Include="bin\x86\sqlceme40.dll" />
     <Content Include="bin\x86\sqlceqp40.dll" />
     <Content Include="bin\x86\sqlcese40.dll" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\site.css" />
     <Content Include="default.aspx" />
+    <Content Include="img\CoffeeRing.png" />
+    <Content Include="img\feed-icon.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\TagCloud.js" />
+    <Content Include="Views\BlogPost.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\BlogPostList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\CategoryList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\feedburner.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\FriendList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_Layout.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -265,11 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="css\" />
     <Folder Include="macroScripts\" />
     <Folder Include="masterpages\" />
     <Folder Include="media\" />
-    <Folder Include="scripts\" />
     <Folder Include="usercontrols\" />
     <Folder Include="Views\MacroPartials\" />
     <Folder Include="Views\Partials\" />
@@ -279,9 +314,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="xslt\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\xsltExtensions.config" />
@@ -350,16 +382,7 @@
     <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\BlogPost.cshtml" />
-    <Content Include="Views\BlogPostList.cshtml" />
-    <Content Include="Views\CategoryList.cshtml" />
-    <Content Include="Views\FriendList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\SiteMap.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

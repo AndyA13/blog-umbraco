@@ -15,7 +15,7 @@ namespace Blog.Models.DocumentTypes
     /// The meta.
     /// </summary>
     [DocumentType(Description = "Common base document for adding meta data to inherited document types.")]
-    public class Meta : DocumentTypeBase
+    public class Meta : PageBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Meta"/> class.

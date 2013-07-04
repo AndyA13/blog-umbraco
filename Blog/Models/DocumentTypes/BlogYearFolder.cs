@@ -15,7 +15,7 @@ namespace Blog.Models.DocumentTypes
     /// The blog year folder.
     /// </summary>
     [DocumentType(Description = "A folder to contain a years posts.", IconUrl = "folder-open-document-text.png", AllowedChildNodeTypes = new[] { typeof(BlogMonthFolder) }, AllowedTemplates = new[] { "BlogPostList" })]
-    public class BlogYearFolder : DocumentTypeBase
+    public class BlogYearFolder : Meta
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BlogYearFolder"/> class.

@@ -15,7 +15,7 @@ namespace Blog.Models.DocumentTypes
     /// The category folder.
     /// </summary>
     [DocumentType(Description = "A folder for containing the categories.", IconUrl = "category.png", AllowedChildNodeTypes = new[] { typeof(Category) }, AllowedTemplates = new[] { "CategoryList" })]
-    public class CategoryFolder : DocumentTypeBase
+    public class CategoryFolder : Meta
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CategoryFolder"/> class.
