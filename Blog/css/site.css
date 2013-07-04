@@ -1,0 +1,58 @@
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 a:link, h1 a:active, h1 a:visited,
+h2 a:link, h2 a:active, h2 a:visited
+{
+    color: #000;
+    text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+header {
+    background: url(../img/CoffeeRing.png) no-repeat top right;
+    height: 160px;
+    padding-top: 40px;
+}
+
+a:link, a:active, a:visited {
+    color: #ff1414;
+}
+
+footer {
+    background-color: #000;
+    color: #bebebe;
+}
+
+footer p {
+    margin: 0;
+    padding: 80px 20px 20px 0px;
+}
+
+footer a:link, footer a:active, footer a:visited {
+    color: #bebebe;
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+p.postMeta {
+    color: #aaa;
+}
