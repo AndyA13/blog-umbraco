@@ -1,7 +1,5 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Blog.Models.ViewModels.PostViewModel>
+﻿@inherits UmbracoViewPage<Blog.Models.ViewModels.PostViewModel>
 @{
-    ViewBag.SeoTitle = Model.Content.SeoTitle;
-    ViewBag.SeoDescription = Model.Content.SeoDescription;
 }
 
 <!-- Post -->
@@ -13,7 +11,7 @@
 
     <div class="span6">
 
-        <h2>@Model.Title</h2>
+        <h2><a href="@Model.Url">@Model.Title</a></h2>
 
         <p class="postMeta">Posted in <a href="@Model.Category.Url">@Model.Category.Name</a></p>
         

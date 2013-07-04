@@ -10,6 +10,7 @@
 namespace Blog.Models.ViewModels
 {
     using System;
+    using Blog.Models.DocumentTypes;
 
     /// <summary>
     /// The post view model.
@@ -20,6 +21,11 @@ namespace Blog.Models.ViewModels
         /// Gets or sets the title.
         /// </summary>
         public string Title { get; set; }
+
+        /// <summary>
+        /// Gets or sets the content.
+        /// </summary>
+        public BlogPost Content { get; set; }
 
         /// <summary>
         /// Gets or sets the url.

@@ -215,6 +215,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CategoryFolderController.cs" />
     <Compile Include="Controllers\FriendFolderController.cs" />
@@ -282,7 +283,7 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\TagCloud.js" />
-    <Content Include="Views\BlogPost.cshtml">
+    <Content Include="Views\Partials\BlogPostPartial.cshtml">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\BlogPostList.cshtml">
@@ -318,7 +319,6 @@
     <Folder Include="media\" />
     <Folder Include="usercontrols\" />
     <Folder Include="Views\MacroPartials\" />
-    <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -403,6 +403,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\PartialSurface\AboutPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
