@@ -11,16 +11,27 @@
     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <link href="/css/site.css" rel="stylesheet" type="text/css" />
     
+    <link rel="icon" type="image/png" href="/img/favico.png" />
+    <link rel="alternate" type="application/rss+xml" title="Andrew Aitken's Blog" href="http://feeds.feedburner.com/AndrewAitken" />
+
     @{
         string title = "Andrew Aitken";
+        string description = string.Empty;
         
         if (!string.IsNullOrEmpty(ViewBag.SeoTitle))
         {
             title = title + " - " + ViewBag.SeoTitle;
         }
+
+        if (!string.IsNullOrEmpty(ViewBag.SeoDescription))
+        {
+            description = ViewBag.SeoDescription;
+        }
     }
 
     <title>@title</title>
+    
+    <meta name="description" content="@description" />
 </head>
 
 <body>
