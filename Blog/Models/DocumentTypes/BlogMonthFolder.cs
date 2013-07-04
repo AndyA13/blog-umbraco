@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The blog month folder.
     /// </summary>
-    [DocumentType(Description = "A folder to contain a months posts.", IconUrl = "folder-open-document-text.png")]
+    [DocumentType(Description = "A folder to contain a months posts.", IconUrl = "folder-open-document-text.png", AllowedChildNodeTypes = new[] { typeof(BlogPost) }, AllowedTemplates = new[] { "BlogPostList" })]
     public class BlogMonthFolder : DocumentTypeBase
     {
         /// <summary>

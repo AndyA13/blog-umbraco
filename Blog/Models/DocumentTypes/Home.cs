@@ -19,7 +19,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The home.
     /// </summary>
-    [DocumentType(Description = "The home page document type.", IconUrl = "home.png")]
+    [DocumentType(Description = "The home page document type.", IconUrl = "home.png", AllowedChildNodeTypes = new[] { typeof(BlogYearFolder), typeof(CategoryFolder), typeof(FriendFolder) }, AllowedTemplates = new[] { "BlogPostList" })]
     public class Home : Meta
     {
         /// <summary>
@@ -39,5 +39,11 @@ namespace Blog.Models.DocumentTypes
             : base(nodeId)
         {
         }
+
+        /// <summary>
+        /// Gets or sets the about.
+        /// </summary>
+        [DocumentTypeProperty(UmbracoPropertyType.SimpleEditor, Description = "The text to appear in the about box.", Tab = "Content", Mandatory = false)]
+        public string About { get; set; }
     }
 }

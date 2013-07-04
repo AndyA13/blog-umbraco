@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The category folder.
     /// </summary>
-    [DocumentType(Description = "A folder for containing the categories.", IconUrl = "category.png")]
+    [DocumentType(Description = "A folder for containing the categories.", IconUrl = "category.png", AllowedChildNodeTypes = new[] { typeof(Category) }, AllowedTemplates = new[] { "CategoryList" })]
     public class CategoryFolder : DocumentTypeBase
     {
         /// <summary>

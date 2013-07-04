@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The blog post.
     /// </summary>
-    [DocumentType(Description = "A document type for a blog post.", IconUrl = "document-text-image.png")]
+    [DocumentType(Description = "A document type for a blog post.", IconUrl = "document-text-image.png", AllowedTemplates = new[] { "BlogPost" })]
     public class BlogPost : Meta
     {
         /// <summary>
@@ -44,7 +44,7 @@ namespace Blog.Models.DocumentTypes
         /// <summary>
         /// Gets or sets the category id.
         /// </summary>
-        [DocumentTypeProperty(UmbracoPropertyType.UltimatePicker, Description = "The category for this post.", Tab = "Content", Mandatory = true)]
+        [DocumentTypeProperty(UmbracoPropertyType.Other, OtherTypeName = "CategoryPicker", Description = "The category for this post.", Tab = "Content", Mandatory = true)]
         public int CategoryId { get; set; }
     }
 }
