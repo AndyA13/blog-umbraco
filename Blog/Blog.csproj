@@ -312,6 +312,7 @@
     <Folder Include="media\" />
     <Folder Include="usercontrols\" />
     <Folder Include="Views\MacroPartials\" />
+    <Folder Include="Views\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

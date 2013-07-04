@@ -16,6 +16,9 @@ namespace Blog.Models.ViewModels
     /// </summary>
     public class PagedPostList
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PagedPostList"/> class.
+        /// </summary>
         public PagedPostList()
         {
             this.Posts = new List<PostViewModel>();
