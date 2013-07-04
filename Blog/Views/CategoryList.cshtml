@@ -1,3 +1,30 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Blog.Models.ViewModels.CategoryListViewModel>
 @{
+    ViewBag.SeoTitle = Model.Content.SeoTitle;
+    ViewBag.SeoDescription = Model.Content.SeoDescription;
 }
+
+@section Header
+{
+    <h3>Categories</h3>
+}
+
+<div class="row">
+
+    <div class="span6 pull-right">
+        
+        <p>
+            You're not really meant to come to this page, but here is a list of categories anyway. That's probably what you were expecting right?
+        </p>
+        
+        <ul class="unstyled">
+            @foreach(var category in Model.Categories)
+            {
+                <li>
+                    <a href="@category.Url">@category.Name</a>
+                </li>
+            }
+        </ul>
+
+    </div>
+</div>
