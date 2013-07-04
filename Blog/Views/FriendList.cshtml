@@ -1,3 +1,27 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Blog.Models.ViewModels.FriendListViewModel>
 @{
+    ViewBag.SeoTitle = Model.Content.SeoTitle;
+    ViewBag.SeoDescription = Model.Content.SeoDescription;
 }
+
+@section Header
+{
+    <h3>Friends</h3>
+}
+
+<!-- Post -->
+<div class="row">
+
+    <div class="span6 pull-right">
+        
+        <ul class="unstyled">
+            @foreach(var friend in Model.Friends)
+            {
+                <li>
+                    <a href="@friend.Url" target="_blank">@friend.Name (@friend.Url)</a>
+                </li>
+            }
+        </ul>
+
+    </div>
+</div>
