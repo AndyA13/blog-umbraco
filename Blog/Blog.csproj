@@ -222,6 +222,7 @@
     <Compile Include="Models\DocumentTypes\CategoryFolder.cs" />
     <Compile Include="Models\DocumentTypes\Friend.cs" />
     <Compile Include="Models\DocumentTypes\FriendFolder.cs" />
+    <Compile Include="Models\DocumentTypes\Home.cs" />
     <Compile Include="Models\DocumentTypes\Meta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

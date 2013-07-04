@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The blog post.
     /// </summary>
-    [DocumentType(Description = "A document type for a blog post.")]
+    [DocumentType(Description = "A document type for a blog post.", IconUrl = "document-text-image.png")]
     public class BlogPost : Meta
     {
         /// <summary>

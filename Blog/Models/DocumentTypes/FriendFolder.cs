@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The friend folder.
     /// </summary>
-    [DocumentType(Description = "A folder to contain friend links.")]
+    [DocumentType(Description = "A folder to contain friend links.", IconUrl = "users.png")]
     public class FriendFolder : DocumentTypeBase
     {
         /// <summary>

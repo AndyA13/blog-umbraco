@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The friend.
     /// </summary>
-    [DocumentType(Description = "A document for representing links to friends.")]
+    [DocumentType(Description = "A document for representing links to friends.", IconUrl = "user.png")]
     public class Friend : DocumentTypeBase
     {
         /// <summary>

@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The blog year folder.
     /// </summary>
-    [DocumentType(Description = "A folder to contain a years posts.")]
+    [DocumentType(Description = "A folder to contain a years posts.", IconUrl = "folder-open-document-text.png")]
     public class BlogYearFolder : DocumentTypeBase
     {
         /// <summary>

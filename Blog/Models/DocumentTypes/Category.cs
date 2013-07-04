@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The category.
     /// </summary>
-    [DocumentType(Description = "A category for a blog post.")]
+    [DocumentType(Description = "A category for a blog post.", IconUrl = "category.png")]
     public class Category : DocumentTypeBase
     {
         /// <summary>
