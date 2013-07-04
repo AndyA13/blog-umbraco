@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Umbraco.Web.Mvc;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="FriendFolderController.cs" company="Andrew Aitken">
+//   Andrew Aitken
+// </copyright>
+// <summary>
+//   Defines the FriendFolderController type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Blog.Controllers
 {
+    using System.Web.Mvc;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
     using Umbraco.Web.Models;
-
+    using Umbraco.Web.Mvc;
     using Vega.USiteBuilder;
 
+    /// <summary>
+    /// The friend folder controller.
+    /// </summary>
     public class FriendFolderController : RenderMvcController
     {
         /// <summary>

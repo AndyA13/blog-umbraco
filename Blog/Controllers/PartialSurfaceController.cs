@@ -10,14 +10,10 @@
 namespace Blog.Controllers
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
-
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
-    using Umbraco.Core.Models;
     using Umbraco.Web.Mvc;
-
     using Vega.USiteBuilder;
 
     /// <summary>
@@ -72,9 +68,9 @@ namespace Blog.Controllers
 
             foreach (Friend friend in ContentHelper.GetChildren<Friend>(1091))
             {
-                friends.Add(new FriendViewModel{ Name = friend.Name, Url = friend.LinkUrl});
+                friends.Add(new FriendViewModel { Name = friend.Name, Url = friend.LinkUrl });
             }
-        
+
             return this.PartialView("FriendPartial", friends);
         }
     }
