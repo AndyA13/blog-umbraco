@@ -43,7 +43,7 @@ namespace Blog.Controllers
                 int.TryParse(Request.QueryString["page"], out pageNumber);
             }
 
-            List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(renderModel.Content.Id, true);
+            List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(renderModel.Content.Id, true).OrderByDescending(p => p.CreateDate).ToList();
 
             int totalPageCount = (int)Math.Ceiling((double)blogPosts.Count() / itemsPerPage);
 

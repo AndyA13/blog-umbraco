@@ -215,9 +215,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BlogMonthFolderController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\BlogYearFolderController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CategoryFolderController.cs" />
+    <Compile Include="Controllers\FeedBurnerController.cs" />
     <Compile Include="Controllers\FriendFolderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialSurfaceController.cs" />

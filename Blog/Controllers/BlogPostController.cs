@@ -9,20 +9,16 @@
 
 namespace Blog.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
     using System.Web.Mvc;
-
+    using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
-
     using Umbraco.Web.Models;
     using Umbraco.Web.Mvc;
-
     using Vega.USiteBuilder;
-    using Blog.Models.DocumentTypes;
 
+    /// <summary>
+    /// The blog post controller.
+    /// </summary>
     public class BlogPostController : RenderMvcController
     {
         /// <summary>
@@ -44,6 +40,7 @@ namespace Blog.Controllers
 
             PostViewModel viewModel = new PostViewModel()
                 {
+                    Content = post,
                     BodyContent = post.BodyText,
                     Category = categoryViewModel,
                     PostDate = post.CreateDate,
@@ -51,9 +48,7 @@ namespace Blog.Controllers
                     Url = post.Url
                 };
 
-
-            return View("BlogPost");
+            return View("BlogPost", viewModel);
         }
-
     }
 }

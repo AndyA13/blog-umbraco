@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CategoryController.cs" company="Andrew Aitken">
+// <copyright file="BlogYearFolderController.cs" company="Andrew Aitken">
 //   Andrew Aitken
 // </copyright>
 // <summary>
-//   Defines the CategoryController type.
+//   The blog year folder controller.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -20,9 +20,9 @@ namespace Blog.Controllers
     using Vega.USiteBuilder;
 
     /// <summary>
-    /// The category controller.
+    /// The blog year folder controller.
     /// </summary>
-    public class CategoryController : RenderMvcController
+    public class BlogYearFolderController : RenderMvcController
     {
         /// <summary>
         /// The blog post list.
@@ -43,13 +43,13 @@ namespace Blog.Controllers
                 int.TryParse(Request.QueryString["page"], out pageNumber);
             }
 
-            List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(1089, true).Where(p => p.CategoryId == renderModel.Content.Id).OrderByDescending(p => p.CreateDate).ToList();
+            List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(renderModel.Content.Id, true).OrderByDescending(p => p.CreateDate).ToList();
 
             int totalPageCount = (int)Math.Ceiling((double)blogPosts.Count() / itemsPerPage);
 
             PagedPostList viewModel = new PagedPostList
             {
-                Header = string.Format("{0} posts", renderModel.Content.Name),
+                Header = string.Format("Posts from {0}", renderModel.Content.Name),
                 CurrentUrl = renderModel.Content.Url,
                 PageNumber = pageNumber,
                 TotalNumberOfPages = totalPageCount
@@ -57,17 +57,14 @@ namespace Blog.Controllers
 
             IEnumerable<BlogPost> posts = blogPosts.Skip(itemsPerPage * (pageNumber - 1)).Take(itemsPerPage);
 
-            // Will all be the same category
-            Category category = ContentHelper.GetByNodeId<Category>(renderModel.Content.Id);
-
-            CategoryViewModel categoryViewModel = new CategoryViewModel { Name = category.Name, Url = category.Url };
-
             foreach (BlogPost blogPost in posts)
             {
+                Category category = ContentHelper.GetByNodeId<Category>(blogPost.CategoryId);
+
                 viewModel.Posts.Add(new PostViewModel
                 {
                     BodyContent = blogPost.BodyText,
-                    Category = categoryViewModel,
+                    Category = new CategoryViewModel { Name = category.Name, Url = category.Url },
                     PostDate = blogPost.CreateDate,
                     Title = blogPost.Name,
                     Url = blogPost.Url
