@@ -1,13 +1,38 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Category.cs" company="Andrew Aitken">
+//   Andrew Aitken
+// </copyright>
+// <summary>
+//   The category.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-[DocumentType(Description = "A category for a blog post.")]
-public class Category : DocumentTypeBase
+namespace Blog.Models.DocumentTypes
 {
-	public Category()
-	{
-	}
-	
-	public Category(int nodeId)
-		: base(nodeId)
-	{
-	}
+    using Vega.USiteBuilder;
+
+    /// <summary>
+    /// The category.
+    /// </summary>
+    [DocumentType(Description = "A category for a blog post.")]
+    public class Category : DocumentTypeBase
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Category"/> class.
+        /// </summary>
+        public Category()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Category"/> class.
+        /// </summary>
+        /// <param name="nodeId">
+        /// The node id.
+        /// </param>
+        public Category(int nodeId)
+            : base(nodeId)
+        {
+        }
+    }
 }

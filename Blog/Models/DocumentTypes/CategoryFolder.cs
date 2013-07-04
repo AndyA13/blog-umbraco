@@ -1,13 +1,38 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="CategoryFolder.cs" company="Andrew Aitken">
+//   Andrew Aitken
+// </copyright>
+// <summary>
+//   The category folder.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-[DocumentType(Description = "A folder for containing the categories.")]
-public class CategoryFolder : DocumentTypeBase
+namespace Blog.Models.DocumentTypes
 {
-	public CategoryFolder ()
-	{
-	}
-	
-	public CategoryFolder(int nodeId)
-		: base(nodeId)
-	{
-	}
+    using Vega.USiteBuilder;
+
+    /// <summary>
+    /// The category folder.
+    /// </summary>
+    [DocumentType(Description = "A folder for containing the categories.")]
+    public class CategoryFolder : DocumentTypeBase
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CategoryFolder"/> class.
+        /// </summary>
+        public CategoryFolder()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CategoryFolder"/> class.
+        /// </summary>
+        /// <param name="nodeId">
+        /// The node id.
+        /// </param>
+        public CategoryFolder(int nodeId)
+            : base(nodeId)
+        {
+        }
+    }
 }

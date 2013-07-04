@@ -215,6 +215,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\DocumentTypes\BlogMonthFolder.cs" />
+    <Compile Include="Models\DocumentTypes\BlogPost.cs" />
+    <Compile Include="Models\DocumentTypes\BlogYearFolder.cs" />
+    <Compile Include="Models\DocumentTypes\Category.cs" />
+    <Compile Include="Models\DocumentTypes\CategoryFolder.cs" />
+    <Compile Include="Models\DocumentTypes\Friend.cs" />
+    <Compile Include="Models\DocumentTypes\FriendFolder.cs" />
+    <Compile Include="Models\DocumentTypes\Meta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -260,7 +268,6 @@
     <Folder Include="macroScripts\" />
     <Folder Include="masterpages\" />
     <Folder Include="media\" />
-    <Folder Include="Models\" />
     <Folder Include="scripts\" />
     <Folder Include="usercontrols\" />
     <Folder Include="Views\MacroPartials\" />
