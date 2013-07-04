@@ -1,0 +1,17 @@
+﻿@model List<Blog.Models.ViewModels.FriendViewModel>
+@{
+    Layout = null;
+}
+
+@if(Model.Any())
+{
+     <h3>Friends</h3>
+    
+    <ul class="unstyled">
+                    
+        @foreach (var friend in Model)
+        {
+            <li><a target="_blank" href="@friend.Url">@friend.Name</a></li>
+        }
+    </ul>
+}

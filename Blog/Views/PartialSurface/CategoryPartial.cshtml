@@ -1,0 +1,17 @@
+﻿@model List<Blog.Models.ViewModels.CategoryViewModel>
+@{
+    Layout = null;
+}
+
+@if(Model.Any())
+{
+     <h3>Categories</h3>
+    
+    <ul class="unstyled">
+                    
+        @foreach (var category in Model)
+        {
+            <li><a href="@category.Url">@category.Name</a></li>
+        }
+    </ul>
+}

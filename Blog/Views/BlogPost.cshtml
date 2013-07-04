@@ -1,3 +1,25 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Blog.Models.ViewModels.PostViewModel>
 @{
 }
+
+<!-- Post -->
+<div class="row">
+
+    <div class="span3">
+        <p class="postMeta uppercase">@Model.PostDate.ToString("ddd dd MMM yyyy")</p>
+    </div>
+
+    <div class="span6">
+
+        <h2><a href="@Model.Url">@Model.Title</a></h2>
+
+        <p class="postMeta">Posted in <a href="@Model.Category.Url">@Model.Category.Name</a></p>
+        
+        @Html.Raw(Model.BodyContent)
+        
+        <!--<p class="postMeta">
+                Tags: <a href="#">Html</a>, <a href="#">CSS</a>, <a href="#">javascript</a>
+            </p>-->
+
+    </div>
+</div>

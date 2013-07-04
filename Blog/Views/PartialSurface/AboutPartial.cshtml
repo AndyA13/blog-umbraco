@@ -1,0 +1,13 @@
+﻿@model string
+@{
+    
+}
+
+@if(!string.IsNullOrEmpty(Model))
+{
+    <h3>About</h3>
+
+    <p>
+        @Html.Raw(Model)
+    </p>
+}
