@@ -224,6 +224,7 @@
     <Compile Include="Controllers\FriendFolderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialSurfaceController.cs" />
+    <Compile Include="Controllers\SiteMapController.cs" />
     <Compile Include="Models\DocumentTypes\BlogMonthFolder.cs" />
     <Compile Include="Models\DocumentTypes\BlogPost.cs" />
     <Compile Include="Models\DocumentTypes\BlogYearFolder.cs" />
