@@ -1,0 +1,8 @@
+﻿Site built by me @AndyA13
+
+Design originally by @sgxbsxn
+
+Using:
+- Twitter Bootstrap
+- Umbraco
+- uSiteBuilder
