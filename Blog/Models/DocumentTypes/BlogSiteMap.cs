@@ -14,13 +14,13 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The site map.
     /// </summary>
-    [DocumentType(Description = "Site map document type.", IconUrl = "sitemap.png", AllowedTemplates = new[] { "sitemap" })]
-    public class SiteMap : DocumentTypeBase
+    [DocumentType(Description = "Site map document type.", IconUrl = "sitemap.png", AllowedTemplates = new[] { "SiteMapTemplate" })]
+    public class BlogSiteMap : DocumentTypeBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteMap"/> class.
         /// </summary>
-        public SiteMap()
+        public BlogSiteMap()
         {
         }
 
@@ -30,7 +30,7 @@ namespace Blog.Models.DocumentTypes
         /// <param name="nodeId">
         /// The node id.
         /// </param>
-        public SiteMap(int nodeId)
+        public BlogSiteMap(int nodeId)
             : base(nodeId)
         {
         }

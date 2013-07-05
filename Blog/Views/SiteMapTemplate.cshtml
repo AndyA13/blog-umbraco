@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IEnumerable<Blog.Models.ViewModels.SiteMapViewModel>>
+@{
+    Layout = null;
+}
+<?xml version="1.0" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    @foreach(var sitemapElement in Model)
+    {
+        <url>
+            <loc>http://andrewaitken.com@(sitemapElement.Url)</loc>
+            <lastmod>@sitemapElement.LastModified.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ssK")</lastmod>
+        </url>
+    }
+</urlset>
