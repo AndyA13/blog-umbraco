@@ -231,6 +231,7 @@
     <Compile Include="Models\DocumentTypes\Category.cs" />
     <Compile Include="Models\DocumentTypes\CategoryFolder.cs" />
     <Compile Include="Models\DocumentTypes\FeedBurner.cs" />
+    <Compile Include="Models\DocumentTypes\FourOhFour.cs" />
     <Compile Include="Models\DocumentTypes\Friend.cs" />
     <Compile Include="Models\DocumentTypes\FriendFolder.cs" />
     <Compile Include="Models\DocumentTypes\Home.cs" />
@@ -274,6 +275,7 @@
     <Content Include="bin\x86\sqlceme40.dll" />
     <Content Include="bin\x86\sqlceqp40.dll" />
     <Content Include="bin\x86\sqlcese40.dll" />
+    <Content Include="humans.txt" />
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap-responsive.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -285,6 +287,7 @@
     <Content Include="img\feed-icon.png" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="robots.txt" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\TagCloud.js" />
@@ -411,6 +414,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\SiteMapTemplate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NotFound.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,25 @@
+﻿@using Blog.Models.DocumentTypes
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    FourOhFour page = Vega.USiteBuilder.ContentHelper.GetByNodeId<FourOhFour>(Model.Content.Id);
+    
+    Response.StatusCode = 404;
+    Response.StatusDescription = "File not found";
+
+    ViewBag.SeoTitle = page.SeoTitle;
+    ViewBag.SeoDescription = page.SeoDescription;
+}
+
+@section Header
+{
+    <h3>Oh Noes!</h3>
+}
+
+<div class="row">
+
+    <div class="span6 pull-right">
+        
+        @Html.Raw(page.BodyText)
+        
+    </div>
+</div>

@@ -14,7 +14,7 @@ namespace Blog.Models.DocumentTypes
     /// <summary>
     /// The home.
     /// </summary>
-    [DocumentType(Description = "The home page document type.", IconUrl = "home.png", AllowedChildNodeTypes = new[] { typeof(BlogYearFolder), typeof(CategoryFolder), typeof(FriendFolder), typeof(FeedBurner), typeof(BlogSiteMap) }, AllowedTemplates = new[] { "BlogPostList" })]
+    [DocumentType(Description = "The home page document type.", IconUrl = "home.png", AllowedChildNodeTypes = new[] { typeof(BlogYearFolder), typeof(CategoryFolder), typeof(FriendFolder), typeof(FourOhFour), typeof(FeedBurner), typeof(BlogSiteMap) }, AllowedTemplates = new[] { "BlogPostList" })]
     public class Home : Meta
     {
         /// <summary>
