@@ -16,7 +16,7 @@
                 @Html.Raw(String.Format("<link>http://andrewaitken.com{0}</link>", post.Url))
                 <guid>@(String.Format("http://andrewaitken.com{0}", post.Url))</guid>
                 <pubDate>@post.PostDate.ToUniversalTime().ToString("r")</pubDate>
-                <description><![CDATA[@post.BodyContent]]></description>
+                <description><![CDATA[@Html.Raw(post.BodyContent)]]></description>
             </item>
         }
     </channel>
