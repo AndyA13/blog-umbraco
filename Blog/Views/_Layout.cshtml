@@ -10,14 +10,14 @@
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <link href="/css/site.css" rel="stylesheet" type="text/css" />
-    
+
     <link rel="icon" type="image/png" href="/img/favico.png" />
     <link rel="alternate" type="application/rss+xml" title="Andrew Aitken's Blog" href="http://feeds.feedburner.com/AndrewAitken" />
 
     @{
         string title = "Andrew Aitken";
         string description = string.Empty;
-        
+
         if (!string.IsNullOrEmpty(ViewBag.SeoTitle))
         {
             title = title + " - " + ViewBag.SeoTitle;
@@ -30,7 +30,7 @@
     }
 
     <title>@title</title>
-    
+
     <meta name="description" content="@description" />
 </head>
 
@@ -62,7 +62,7 @@
 
         <div class="row">
             <div class="span9">
-                
+
                 @this.RenderBody()
 
             </div>
@@ -73,9 +73,9 @@
                     <a href="http://feeds.feedburner.com/AndrewAitken" title="RSS Feed">
                         <img src="/img/feed-icon.png" alt="RSS Feed"></a>
                 </p>
-                
+
                 @{Html.RenderAction("About", "PartialSurface");}
-                
+
 
                 @{Html.RenderAction("CategoryList", "PartialSurface");}
 
@@ -103,7 +103,7 @@
                         <li><a href="#">Fun</a></li>
                         <li><a href="#">VB</a></li>
                     </ul>-->
-                
+
                 @{Html.RenderAction("FriendList", "PartialSurface");}
 
             </div>
@@ -114,8 +114,16 @@
 
     <footer class="text-right">
         <div class="container">
+
             <div class="row">
-                <div class="span12">
+                <div class="span6">
+                    <a class="twitter-timeline" href="https://twitter.com/AndyA13" data-widget-id="355001856507928576">Tweets by @@AndyA13</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 pull-right">
                     <p>
                         &copy; Copyright Andrew Aitken @DateTime.Now.Year.ToString(CultureInfo.InvariantCulture) | Design by <a href="https://twitter.com/sgxbsxn">Steven Gibson</a>
                     </p>

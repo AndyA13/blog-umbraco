@@ -10,6 +10,7 @@
 namespace Blog.Controllers
 {
     using System.Collections.Generic;
+    using System.Runtime.Caching;
     using System.Web.Mvc;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
