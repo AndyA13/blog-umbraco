@@ -41,7 +41,7 @@ footer {
 
 footer p {
     margin: 0;
-    padding: 80px 20px 20px 0px;
+    padding: 6em 1em 2em 0;
 }
 
 footer a:link, footer a:active, footer a:visited {
