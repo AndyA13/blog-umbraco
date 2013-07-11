@@ -43,6 +43,11 @@ namespace Blog.Models.ViewModels
         public CategoryViewModel Category { get; set; }
 
         /// <summary>
+        /// Gets or sets the tags.
+        /// </summary>
+        public string[] Tags { get; set; }
+
+        /// <summary>
         /// Gets or sets the body content.
         /// </summary>
         public string BodyContent { get; set; }

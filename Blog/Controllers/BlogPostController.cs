@@ -38,11 +38,14 @@ namespace Blog.Controllers
 
             CategoryViewModel categoryViewModel = new CategoryViewModel { Name = category.Name, Url = category.Url };
 
+            string[] tags = post.Tags != null ? post.Tags.Split(',') : new string[0];
+
             PostViewModel viewModel = new PostViewModel()
                 {
                     Content = post,
                     BodyContent = post.BodyText,
                     Category = categoryViewModel,
+                    Tags = tags,
                     PostDate = post.CreateDate,
                     Title = post.Name,
                     Url = post.Url

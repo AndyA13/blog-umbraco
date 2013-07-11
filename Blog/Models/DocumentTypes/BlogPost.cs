@@ -46,5 +46,11 @@ namespace Blog.Models.DocumentTypes
         /// </summary>
         [DocumentTypeProperty(UmbracoPropertyType.Other, OtherTypeName = "CategoryPicker", Description = "The category for this post.", Tab = "Content", Mandatory = true)]
         public int CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tags.
+        /// </summary>
+        [DocumentTypeProperty(UmbracoPropertyType.Tags, Description = "The tags for this post.", Tab = "Content", Mandatory = false)]
+        public string Tags { get; set; }
     }
 }
