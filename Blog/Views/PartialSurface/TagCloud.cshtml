@@ -1,0 +1,17 @@
+﻿@model IEnumerable<umbraco.cms.businesslogic.Tags.Tag>
+@{
+    Layout = null;
+}
+
+@if(Model.Any())
+{
+     <h3>Tags</h3>
+    
+    <ul class="unstyled">
+                    
+        @foreach (var tag in Model)
+        {
+            <li data-count="@tag.NodeCount"><a target="_blank" href="/tags/?tag=@tag.TagCaption">@tag.TagCaption</a></li>
+        }
+    </ul>
+}

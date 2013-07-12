@@ -15,6 +15,7 @@ namespace Blog.Controllers
     using Blog.Models.ViewModels;
     using Umbraco.Web.Mvc;
     using Vega.USiteBuilder;
+    using umbraco.cms.businesslogic.Tags;
 
     /// <summary>
     /// The partial surface controller.
@@ -72,6 +73,19 @@ namespace Blog.Controllers
             }
 
             return this.PartialView("FriendPartial", friends);
+        }
+
+        /// <summary>
+        /// The tag cloud.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="PartialViewResult"/>.
+        /// </returns>
+        public PartialViewResult TagCloud()
+        {
+            IEnumerable<Tag> tags = Tag.GetTags();
+
+            return this.PartialView("TagCloud", tags);
         }
     }
 }
