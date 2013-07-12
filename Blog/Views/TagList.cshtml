@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IEnumerable<umbraco.cms.businesslogic.Tags.Tag>>
+@{
+    
+}
+
+@section Header
+{
+    <h3>Tags</h3>
+}
+
+<div class="row">
+
+    <div class="span6 pull-right">
+        
+        <p>
+            All the tags currently used on the site.
+        </p>
+        
+        <ul class="unstyled">
+            @foreach(var tag in Model)
+            {
+                <li>
+                    <a href="/tags/?tag=@tag.TagCaption">@tag.TagCaption (@tag.NodeCount)</a>
+                </li>
+            }
+        </ul>
+
+    </div>
+</div>
+

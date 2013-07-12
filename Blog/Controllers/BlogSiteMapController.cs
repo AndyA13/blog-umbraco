@@ -41,9 +41,7 @@ namespace Blog.Controllers
                 sitemapElements.Add(new SiteMapViewModel { Url = homepage.Url, LastModified = homepage.UpdateDate });
             }
 
-            DynamicNodeList sitemapPages =
-                homepage.Descendants(
-                    n => n.GetProperty("showInSiteMap") != null && n.GetProperty("showInSiteMap").HasValue() && n.GetProperty("showInSiteMap").Value == "1");
+            DynamicNodeList sitemapPages = homepage.Descendants(n => n.GetProperty("showInSiteMap") != null && n.GetProperty("showInSiteMap").HasValue() && n.GetProperty("showInSiteMap").Value == "1");
 
             foreach (DynamicNode page in sitemapPages)
             {

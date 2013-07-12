@@ -13,6 +13,8 @@ namespace Blog.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
+
+    using Blog.Infrastructure;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
     using Umbraco.Web.Models;
@@ -47,11 +49,19 @@ namespace Blog.Controllers
 
             int totalPageCount = (int)Math.Ceiling((double)blogPosts.Count() / itemsPerPage);
 
-            int year = 2001;
-            int.TryParse(renderModel.Content.Parent.Name, out year);
+            int year;
+            
+            if (!int.TryParse(renderModel.Content.Parent.Name, out year))
+            {
+                year = 2001;
+            }
 
-            int month = 1;
-            int.TryParse(renderModel.Content.Name, out month);
+            int month;
+
+            if (!int.TryParse(renderModel.Content.Name, out month))
+            {
+                month = 1;
+            }
 
             DateTime postDates = new DateTime(year, month, 1);
 
@@ -60,24 +70,9 @@ namespace Blog.Controllers
                 Header = string.Format("Posts from {0}", postDates.ToString("MMMM yyyy")),
                 CurrentUrl = renderModel.Content.Url,
                 PageNumber = pageNumber,
+                Posts = blogPosts.Skip(itemsPerPage * (pageNumber - 1)).Take(itemsPerPage).ToViewModel(),
                 TotalNumberOfPages = totalPageCount
             };
-
-            IEnumerable<BlogPost> posts = blogPosts.Skip(itemsPerPage * (pageNumber - 1)).Take(itemsPerPage);
-
-            foreach (BlogPost blogPost in posts)
-            {
-                Category category = ContentHelper.GetByNodeId<Category>(blogPost.CategoryId);
-
-                viewModel.Posts.Add(new PostViewModel
-                {
-                    BodyContent = blogPost.BodyText,
-                    Category = new CategoryViewModel { Name = category.Name, Url = category.Url },
-                    PostDate = blogPost.CreateDate,
-                    Title = blogPost.Name,
-                    Url = blogPost.Url
-                });
-            }
 
             return this.View("BlogPostList", viewModel);
         }

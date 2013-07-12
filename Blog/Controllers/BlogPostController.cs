@@ -10,6 +10,8 @@
 namespace Blog.Controllers
 {
     using System.Web.Mvc;
+
+    using Blog.Infrastructure;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
     using Umbraco.Web.Models;
@@ -34,24 +36,9 @@ namespace Blog.Controllers
         {
             BlogPost post = ContentHelper.GetByNodeId<BlogPost>(renderModel.Content.Id);
 
-            Category category = ContentHelper.GetByNodeId<Category>(post.CategoryId);
+            PostViewModel viewModel = post.ToViewModel();
 
-            CategoryViewModel categoryViewModel = new CategoryViewModel { Name = category.Name, Url = category.Url };
-
-            string[] tags = post.Tags != null ? post.Tags.Split(',') : new string[0];
-
-            PostViewModel viewModel = new PostViewModel()
-                {
-                    Content = post,
-                    BodyContent = post.BodyText,
-                    Category = categoryViewModel,
-                    Tags = tags,
-                    PostDate = post.CreateDate,
-                    Title = post.Name,
-                    Url = post.Url
-                };
-
-            return View("BlogPost", viewModel);
+            return this.View("BlogPost", viewModel);
         }
     }
 }

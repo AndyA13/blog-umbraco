@@ -13,6 +13,8 @@ namespace Blog.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
+
+    using Blog.Infrastructure;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
     using Umbraco.Web.Models;
@@ -52,24 +54,9 @@ namespace Blog.Controllers
                 Header = "All Posts",
                 CurrentUrl = renderModel.Content.Url,
                 PageNumber = pageNumber,
-                TotalNumberOfPages = totalPageCount
+                TotalNumberOfPages = totalPageCount,
+                Posts = blogPosts.Skip(itemsPerPage * (pageNumber - 1)).Take(itemsPerPage).ToViewModel()
             };
-
-            IEnumerable<BlogPost> posts = blogPosts.Skip(itemsPerPage * (pageNumber - 1)).Take(itemsPerPage);
-
-            foreach (BlogPost blogPost in posts)
-            {
-                Category category = ContentHelper.GetByNodeId<Category>(blogPost.CategoryId);
-
-                viewModel.Posts.Add(new PostViewModel
-                    {
-                        BodyContent = blogPost.BodyText,
-                        Category = new CategoryViewModel { Name = category.Name, Url = category.Url },
-                        PostDate = blogPost.CreateDate,
-                        Title = blogPost.Name,
-                        Url = blogPost.Url
-                    });
-            }
 
             return this.View("BlogPostList", viewModel);
         }

@@ -1,0 +1,45 @@
+﻿@using System.Globalization
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<Blog.Models.ViewModels.PagedPostList>
+@{
+    
+}
+
+@section Header
+{
+    <h3>@Model.Header</h3>
+}
+
+@foreach(var post in Model.Posts)
+{
+    Html.RenderPartial("BlogPostPartial", post);
+}
+
+<div class="row">
+    
+    <!-- Paging -->
+    <div class="span6 pull-right">
+        <ul class="pager">
+            <li class="previous @(Model.PageNumber == 1 ? "disabled" : "")">
+                @if (Model.PageNumber == 1)
+                {
+                    <a href="#">&laquo; Previous</a>
+                }
+                else
+                {
+                    <a href="@Model.CurrentUrl@(Model.PageNumber == 2 ? "" : "?page=" + (Model.PageNumber - 1).ToString(CultureInfo.InvariantCulture))">&laquo; Previous</a>
+                }
+            </li>
+            <li class="next @(Model.PageNumber >= Model.TotalNumberOfPages ? "disabled" : "")">
+                @if (Model.PageNumber < Model.TotalNumberOfPages)
+                {
+                    <a href="@Model.CurrentUrl?page=@(Model.PageNumber + 1)">Next &raquo;</a>
+                }
+                else
+                {
+                    <a href="#">Next &raquo;</a>
+                }
+            </li>
+        </ul>
+    </div>
+
+</div>

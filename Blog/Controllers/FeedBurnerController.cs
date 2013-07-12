@@ -12,6 +12,8 @@ namespace Blog.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
+
+    using Blog.Infrastructure;
     using Blog.Models.DocumentTypes;
     using Umbraco.Web.Models;
     using Umbraco.Web.Mvc;
@@ -37,18 +39,7 @@ namespace Blog.Controllers
             // Get 10 latest posts
             List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(1089, true).OrderByDescending(p => p.CreateDate).Take(10).ToList();
 
-            List<PostViewModel> viewPosts = new List<PostViewModel>();
-
-            foreach (BlogPost blogPost in blogPosts)
-            {
-                viewPosts.Add(new PostViewModel()
-                    {
-                        BodyContent = blogPost.BodyText,
-                        Title = blogPost.Name,
-                        Url = blogPost.Url,
-                        PostDate = blogPost.CreateDate,
-                    });
-            }
+            List<PostViewModel> viewPosts = blogPosts.ToViewModel();
 
             return this.View("FeedBurner", viewPosts);
         }

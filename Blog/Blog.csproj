@@ -228,7 +228,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialSurfaceController.cs" />
     <Compile Include="Controllers\BlogSiteMapController.cs" />
-    <Compile Include="Infrastructure\Twitter\TwitterFeed.cs" />
+    <Compile Include="Controllers\TagListController.cs" />
+    <Compile Include="Infrastructure\Extensions.cs" />
     <Compile Include="Models\DocumentTypes\BlogMonthFolder.cs" />
     <Compile Include="Models\DocumentTypes\BlogPost.cs" />
     <Compile Include="Models\DocumentTypes\BlogYearFolder.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="Models\DocumentTypes\Meta.cs" />
     <Compile Include="Models\DocumentTypes\PageBase.cs" />
     <Compile Include="Models\DocumentTypes\BlogSiteMap.cs" />
+    <Compile Include="Models\DocumentTypes\TagList.cs" />
     <Compile Include="Models\ViewModels\CategoryListViewModel.cs" />
     <Compile Include="Models\ViewModels\CategoryViewModel.cs" />
     <Compile Include="Models\ViewModels\FriendListViewModel.cs" />
@@ -423,6 +425,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TagList.cshtml" />
+    <Content Include="Views\TagPostList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
