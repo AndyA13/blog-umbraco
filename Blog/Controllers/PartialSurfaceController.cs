@@ -13,9 +13,9 @@ namespace Blog.Controllers
     using System.Web.Mvc;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
+    using umbraco.cms.businesslogic.Tags;
     using Umbraco.Web.Mvc;
     using Vega.USiteBuilder;
-    using umbraco.cms.businesslogic.Tags;
 
     /// <summary>
     /// The partial surface controller.
@@ -30,6 +30,7 @@ namespace Blog.Controllers
         /// </returns>
         public PartialViewResult About()
         {
+            // TODO: Magic number (1089 = home page node id)
             Home home = ContentHelper.GetByNodeId<Home>(1089);
 
             return this.PartialView("AboutPartial", home.About);
@@ -45,6 +46,7 @@ namespace Blog.Controllers
         {
             List<CategoryViewModel> categories = new List<CategoryViewModel>();
 
+            // TODO: Magic number (1090 = categories folder node id)
             foreach (Category category in ContentHelper.GetChildren<Category>(1090))
             {
                 categories.Add(new CategoryViewModel
@@ -67,6 +69,7 @@ namespace Blog.Controllers
         {
             List<FriendViewModel> friends = new List<FriendViewModel>();
 
+            // TODO: Magic number (1091 = friends folder node id)
             foreach (Friend friend in ContentHelper.GetChildren<Friend>(1091))
             {
                 friends.Add(new FriendViewModel { Name = friend.Name, Url = friend.LinkUrl });

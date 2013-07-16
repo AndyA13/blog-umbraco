@@ -39,6 +39,7 @@ namespace Blog.Controllers
                 Content = model
             };
 
+            // TODO: Magic number (1091 is friend folder node ID)
             foreach (Friend friend in ContentHelper.GetChildren<Friend>(1091))
             {
                 viewModel.Friends.Add(new FriendViewModel { Name = friend.Name, Url = friend.LinkUrl });

@@ -39,6 +39,7 @@ namespace Blog.Controllers
                 Content = model
             };
 
+            // TODO: Magic number (1090 is category folder node id)
             foreach (Category category in ContentHelper.GetChildren<Category>(1090))
             {
                 viewModel.Categories.Add(new CategoryViewModel { Name = category.Name, Url = category.Url });

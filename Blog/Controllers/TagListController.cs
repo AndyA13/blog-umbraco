@@ -1,26 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Umbraco.Web.Mvc;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="TagListController.cs" company="Andrew Aitken">
+//   Andrew Aitken
+// </copyright>
+// <summary>
+//   Defines the TagListController type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Blog.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
     using Blog.Infrastructure;
-
-    using Umbraco.Web.Models;
-
-    using Vega.USiteBuilder;
-
+    using Blog.Models.DocumentTypes;
+    using Blog.Models.ViewModels;
     using umbraco.cms.businesslogic;
     using umbraco.cms.businesslogic.Tags;
-    using Blog.Models.ViewModels;
-    using Blog.Models.DocumentTypes;
+    using Umbraco.Web.Models;
+    using Umbraco.Web.Mvc;
+    using Vega.USiteBuilder;
 
+    /// <summary>
+    /// The tag list controller.
+    /// </summary>
     public class TagListController : RenderMvcController
     {
-        public ActionResult Index(RenderModel renderModel)
+        /// <summary>
+        /// The default action for the tag list controller.
+        /// </summary>
+        /// <param name="renderModel">
+        /// The render model.
+        /// </param>
+        /// <returns>
+        /// The <see cref="ActionResult"/>.
+        /// </returns>
+        public override ActionResult Index(RenderModel renderModel)
         {
             int pageNumber = 1;
             int itemsPerPage = 5;
@@ -29,7 +45,6 @@ namespace Blog.Controllers
             {
                 int.TryParse(Request.QueryString["page"], out pageNumber);
             }
-
 
             if (!string.IsNullOrEmpty(Request.QueryString["tag"]))
             {
@@ -65,6 +80,5 @@ namespace Blog.Controllers
             
             return this.View("TagList", tags);
         }
-
     }
 }

@@ -3,12 +3,12 @@
     Layout = null;
 }
 
-@if(Model.Any())
+@if (Model.Any())
 {
-     <h3>Tags</h3>
+    <h3>Tags</h3>
     
     <ul class="unstyled">
-                    
+
         @foreach (var tag in Model)
         {
             <li data-count="@tag.NodeCount"><a target="_blank" href="/tags/?tag=@tag.TagCaption">@tag.TagCaption</a></li>

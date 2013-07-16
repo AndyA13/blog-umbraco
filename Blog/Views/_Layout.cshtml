@@ -16,7 +16,7 @@
 
     @{
         string title = "Andrew Aitken";
-        string description = string.Empty;
+        string description = "My name is Andrew Aitken and I am a .Net developer working in Glasgow blogging about anything I find interesting or think is worth sharing.";
 
         if (!string.IsNullOrEmpty(ViewBag.SeoTitle))
         {
@@ -79,35 +79,9 @@
 
                 @{Html.RenderAction("About", "PartialSurface");}
 
-
                 @{Html.RenderAction("CategoryList", "PartialSurface");}
                 
                 @{Html.RenderAction("TagCloud", "PartialSurface");}
-
-                <!--<h3>Tags</h3>
-
-                    <ul class="inline">
-                        <li><a href="#">70-513</a></li>
-                        <li><a href="#">70-515</a></li>
-                        <li><a href="#">70-516</a></li>
-                        <li><a href="#">70-519</a></li>
-                        <li><a href="#">C#</a></li>
-                        <li><a href="#">Cache</a></li>
-                        <li><a href="#">Calangute</a></li>
-                        <li><a href="#">Chicken</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Down The Road</a></li>
-                        <li><a href="#">elmah</a></li>
-                        <li><a href="#">Goa</a></li>
-                        <li><a href="#">Hangman</a></li>
-                        <li><a href="#">India</a></li>
-                        <li><a href="#">MCPD</a></li>
-                        <li><a href="#">My Blog</a></li>
-                        <li><a href="#">Qwerk</a></li>
-                        <li><a href="#">Umbraco</a></li>
-                        <li><a href="#">Fun</a></li>
-                        <li><a href="#">VB</a></li>
-                    </ul>-->
 
                 @{Html.RenderAction("FriendList", "PartialSurface");}
 

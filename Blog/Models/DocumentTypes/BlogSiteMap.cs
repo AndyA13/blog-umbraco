@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SiteMap.cs" company="Andrew Aitken">
+// <copyright file="BlogSiteMap.cs" company="Andrew Aitken">
 //   Andrew Aitken
 // </copyright>
 // <summary>
@@ -18,14 +18,14 @@ namespace Blog.Models.DocumentTypes
     public class BlogSiteMap : DocumentTypeBase
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SiteMap"/> class.
+        /// Initializes a new instance of the <see cref="BlogSiteMap"/> class.
         /// </summary>
         public BlogSiteMap()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SiteMap"/> class.
+        /// Initializes a new instance of the <see cref="BlogSiteMap"/> class.
         /// </summary>
         /// <param name="nodeId">
         /// The node id.

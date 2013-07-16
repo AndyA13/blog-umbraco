@@ -45,6 +45,7 @@ namespace Blog.Controllers
                 int.TryParse(Request.QueryString["page"], out pageNumber);
             }
 
+            // TODO: Magic number (1089 = home page node id)
             List<BlogPost> blogPosts = ContentHelper.GetChildren<BlogPost>(1089, true).Where(p => p.CategoryId == renderModel.Content.Id).OrderByDescending(p => p.CreateDate).ToList();
 
             int totalPageCount = (int)Math.Ceiling((double)blogPosts.Count() / itemsPerPage);

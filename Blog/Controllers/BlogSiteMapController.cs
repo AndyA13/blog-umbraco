@@ -34,6 +34,7 @@ namespace Blog.Controllers
         {
             List<SiteMapViewModel> sitemapElements = new List<SiteMapViewModel>();
 
+            // TODO: Magic number (1089 = homepage node id)
             DynamicNode homepage = new DynamicNode(1089);
 
             if (homepage.GetProperty("showInSiteMap") != null && homepage.GetProperty("showInSiteMap").Value == "1")

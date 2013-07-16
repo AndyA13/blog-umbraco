@@ -13,7 +13,6 @@ namespace Blog.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
-
     using Blog.Infrastructure;
     using Blog.Models.DocumentTypes;
     using Blog.Models.ViewModels;
