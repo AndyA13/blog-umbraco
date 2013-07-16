@@ -8,7 +8,7 @@
     {
         <url>
             <loc>http://andrewaitken.com@(sitemapElement.Url)</loc>
-            <lastmod>@sitemapElement.LastModified.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ssK")</lastmod>
+            <lastmod>@sitemapElement.LastModified.ToLocalTime().ToString("yyyy-MM-dd'T'HH:mm:ssK")</lastmod>
         </url>
     }
 </urlset>
