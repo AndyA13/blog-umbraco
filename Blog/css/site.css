@@ -24,6 +24,10 @@ h3 {
     font-size: 1.4em;
 }
 
+h4 {
+    margin: 1em 0;
+}
+
 header {
     background: url(../img/CoffeeRing.png) no-repeat top right;
     height: 160px;
@@ -32,6 +36,10 @@ header {
 
 a:link, a:active, a:visited {
     color: #ff1414;
+}
+
+pre {
+    margin: 1em 0;
 }
 
 footer {
