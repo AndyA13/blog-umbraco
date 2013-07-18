@@ -40,6 +40,10 @@ a:link, a:active, a:visited {
 
 pre {
     margin: 1em 0;
+    overflow-x: scroll;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: pre;
 }
 
 footer {
