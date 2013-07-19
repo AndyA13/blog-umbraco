@@ -280,6 +280,8 @@
     <Content Include="bin\x86\sqlceqp40.dll" />
     <Content Include="bin\x86\sqlcese40.dll" />
     <Content Include="css\shCore.css" />
+    <Content Include="css\shThemeDefault.css" />
+    <Content Include="scripts\shBrushCSharp.js" />
     <Content Include="scripts\shCore.js" />
     <Content Include="humans.txt" />
     <Content Include="css\bootstrap-responsive.css" />
