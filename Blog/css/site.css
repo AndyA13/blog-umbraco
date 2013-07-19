@@ -46,6 +46,15 @@ pre {
     white-space: pre;
 }
 
+.syntaxhighlighter {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+}
 footer {
     background-color: #000;
     color: #bebebe;

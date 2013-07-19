@@ -10,7 +10,10 @@
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <link href="/css/site.css" rel="stylesheet" type="text/css" />
-
+    
+    <link href="/css/shCore.css" rel="stylesheet" />
+    <link href="/css/shThemeDefault.css" rel="stylesheet" />
+    
     <link rel="icon" type="image/png" href="/img/favico.png" />
     <link rel="alternate" type="application/rss+xml" title="Andrew Aitken's Blog" href="http://feeds.feedburner.com/AndrewAitken" />
 
@@ -129,7 +132,9 @@
     </footer>
 
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
+    
+    <script src="/scripts/shCore.js"></script>
+    <script src="/scripts/shBrushCSharp.js"></script>
 
     <script type="text/javascript">
 
@@ -142,6 +147,13 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+
+        (function() {
+            $(document).ready(function () {
+                SyntaxHighlighter.defaults['gutter'] = false;
+                SyntaxHighlighter.all();
+            });
+        }(jQuery));
 
     </script>
 
